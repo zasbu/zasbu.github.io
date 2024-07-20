@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS2 Pro Settings</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <title>SurferSettings</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="assets/cog-icon.png" alt="Settings Icon">
+            <img src="assets/cog-icon.png" alt="Settings">
             <span>surfersettings.net</span>
         </div>
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search for players...">
-        </div>
+        <input type="text" id="search" placeholder="Search for players...">
     </header>
     <main>
+        <div class="admin-panel">
+            <h2>Admin Panel</h2>
+            <form id="add-entry-form">
+                <input type="text" id="player" placeholder="Player" required>
+                <input type="text" id="mouse" placeholder="Mouse" required>
+                <input type="number" id="hz" placeholder="HZ" required>
+                <input type="number" id="dpi" placeholder="DPI" required>
+                <input type="number" id="sens" placeholder="Sens" required>
+                <input type="number" id="edpi" placeholder="eDPI" required>
+                <input type="text" id="resolution" placeholder="Resolution" required>
+                <input type="text" id="aspect-ratio" placeholder="Aspect Ratio" required>
+                <input type="text" id="mousepad" placeholder="Mousepad" required>
+                <input type="text" id="keyboard" placeholder="Keyboard" required>
+                <button type="submit">Add Entry</button>
+            </form>
+        </div>
         <div class="table-container">
-            <table>
+            <table id="settings-table">
                 <thead>
                     <tr>
                         <th>Player</th>
@@ -34,26 +48,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>olofmeister</td>
-                        <td>Logitech G Pro X Superlight 2 Black</td>
-                        <td>2000</td>
-                        <td>800</td>
-                        <td>1.1</td>
-                        <td>880</td>
-                        <td>1920x1080</td>
-                        <td>16:9</td>
-                        <td>SteelSeries QcK Heavy</td>
-                        <td>SteelSeries Apex Pro</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
+                    <!-- Entries will be populated here by JavaScript -->
                 </tbody>
             </table>
         </div>
     </main>
     <footer>
-        <p>Icons made by <a href="https://www.flaticon.com/free-icons/cog" title="cog icons">Royyan Wijaya</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        <p><a href="https://www.flaticon.com/free-icons/cog" title="cog icons">Cog icons created by Royyan Wijaya - Flaticon</a></p>
     </footer>
-    <script src="assets/scripts.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 </html>
