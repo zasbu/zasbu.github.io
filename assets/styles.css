@@ -29,7 +29,7 @@ header .logo img {
 header .logo span {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff; /* White color for the text */
+    color: #fff;
 }
 
 header .search-bar input {
