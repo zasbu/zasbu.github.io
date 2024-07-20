@@ -1,56 +1,86 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
 }
 
-header .logo {
+.logo {
     display: flex;
     align-items: center;
 }
 
-header .logo img {
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    margin-right: 8px; /* Space between icon and text */
+.logo img {
+    height: 30px;
+    margin-right: 10px;
 }
 
-header .logo span {
-    font-size: 1.5rem;
+.logo span {
+    font-size: 20px;
     font-weight: bold;
-    color: #fff; /* White color for the text */
 }
 
-header .search-bar input {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
+#search {
+    padding: 10px;
+    border: 1px solid #dddddd;
     border-radius: 4px;
-    width: 300px;
+    width: 200px;
 }
 
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.main {
+    padding: 20px;
+}
+
+.admin-panel {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel h2 {
+    margin-top: 0;
+}
+
+#add-entry-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#add-entry-form input, #add-entry-form button {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+#add-entry-form button {
+    grid-column: span 2;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+#add-entry-form button:hover {
+    background-color: #0056b3;
 }
 
 .table-container {
-    overflow-x: auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 table {
@@ -58,43 +88,20 @@ table {
     border-collapse: collapse;
 }
 
-table th, table td {
-    padding: 1rem;
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-table th {
-    background-color: #333;
-    color: #fff;
-    font-weight: normal;
-}
-
-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-table tbody tr:hover {
-    background-color: #ddd;
+th {
+    background-color: #f8f8f8;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    margin-top: 2rem;
-}
-
-footer p {
-    margin: 0;
-    color: #666;
-}
-
-footer a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #dddddd;
+    margin-top: 20px;
 }
