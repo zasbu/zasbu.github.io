@@ -16,7 +16,20 @@ header {
 }
 
 header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+header .logo span {
     font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* White color for the text */
 }
 
 header .search-bar input {
