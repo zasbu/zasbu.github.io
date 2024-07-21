@@ -42,7 +42,7 @@ header .search-bar input {
 
 main {
     padding: 2rem;
-    max-width: 100%; /* Ensure full width */
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -50,7 +50,7 @@ main {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    overflow: hidden; /* Hide overflow */
 }
 
 table {
@@ -60,12 +60,12 @@ table {
 }
 
 table th, table td {
-    padding: 1rem;
+    padding: 0.75rem; /* Adjusted padding for better fit */
     text-align: left;
     border-bottom: 1px solid #ddd;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowed text */
-    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 table th {
@@ -91,7 +91,7 @@ footer {
     color: #fff;
     padding: 1rem;
     text-align: center;
-    font-size: 0.875rem; /* Adjust font size for footer text */
+    font-size: 0.875rem;
 }
 
 footer .footer-content {
@@ -117,18 +117,9 @@ footer p {
 }
 
 .sort-icon {
-    width: 16px; /* Adjust size */
-    height: 16px;
-    position: relative;
-    margin-left: 8px; /* Space between text and icon */
+    width: 12px; /* Adjust size */
+    height: 12px; /* Adjust size */
+    margin-left: 5px; /* Space between text and icon */
     vertical-align: middle;
     opacity: 0.6;
-}
-
-th.sorted-asc .sort-icon {
-    opacity: 1;
-}
-
-th.sorted-desc .sort-icon {
-    opacity: 1;
 }
