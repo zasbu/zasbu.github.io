@@ -51,8 +51,9 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
-    width: calc(100% - 2rem); /* Adjust width to reduce extra space */
+    padding: 0; /* Remove extra padding */
     margin: 0 auto; /* Center the table container */
+    width: 90%; /* Adjust width to control white space */
 }
 
 table {
@@ -86,7 +87,7 @@ table th {
     color: #fff;
     font-weight: normal;
     cursor: pointer;
-    position: relative; /* Ensure sort icon is positioned relative to header */
+    position: relative; /* Ensure sorting icon is correctly positioned */
 }
 
 table th:hover .sort-icon {
@@ -148,11 +149,10 @@ footer p {
     opacity: 0.6;
 }
 
-.flag-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
+/* Flag image styling */
+.flag {
+    width: 24px; /* Adjust size */
+    height: 16px; /* Adjust size */
     border-radius: 50%; /* Make the image rounded */
-    margin-right: 8px; /* Space between flag and text */
-    vertical-align: middle; /* Align flag with text */
-    display: inline-block;
+    object-fit: cover; /* Ensure image covers the space */
 }
