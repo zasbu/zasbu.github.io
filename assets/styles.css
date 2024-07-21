@@ -68,10 +68,24 @@ table th, table td {
     text-overflow: ellipsis;
 }
 
+table th .sort-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+    opacity: 0.6;
+    transition: opacity 0.3s; /* Smooth transition for hover effect */
+}
+
+table th:hover .sort-icon {
+    opacity: 1; /* Show icon more clearly on hover */
+}
+
 table th {
     background-color: #333;
     color: #fff;
     font-weight: normal;
+    cursor: pointer; /* Indicate that header is clickable */
 }
 
 table tbody tr:nth-child(even) {
