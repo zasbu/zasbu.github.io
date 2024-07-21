@@ -71,14 +71,12 @@ table th, table td {
 table th .sort-icon {
     width: 12px;
     height: 12px;
-    margin-left: 5px;
-    vertical-align: middle;
+    position: absolute;
+    right: 10px; /* Position the icon on the right side of the header */
+    top: 50%;
+    transform: translateY(-50%); /* Center the icon vertically */
     opacity: 0.6;
-    transition: opacity 0.3s; /* Smooth transition for hover effect */
-}
-
-table th:hover .sort-icon {
-    opacity: 1; /* Show icon more clearly on hover */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth transition for hover effect */
 }
 
 table th {
@@ -86,6 +84,13 @@ table th {
     color: #fff;
     font-weight: normal;
     cursor: pointer; /* Indicate that header is clickable */
+    position: relative; /* For positioning the sorting icon */
+    padding-right: 20px; /* Space for sorting icon */
+}
+
+table th:hover .sort-icon {
+    opacity: 1; /* Show icon more clearly on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
 table tbody tr:nth-child(even) {
