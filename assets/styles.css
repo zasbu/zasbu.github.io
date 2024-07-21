@@ -52,13 +52,15 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
     padding: 0; /* Remove padding */
-    margin: 0 2rem; /* Adjust margins to bring content in */
+    margin: 0 1rem; /* Adjust margins to bring content in */
+    display: flex; /* Flex container for centering */
+    justify-content: center; /* Center content */
 }
 
 table {
-    width: 100%;
+    width: auto; /* Adjust width to fit content */
     border-collapse: collapse; /* Collapse borders for a more compact layout */
-    table-layout: fixed; /* Fixed layout to ensure columns stay proportional */
+    table-layout: auto; /* Auto layout for dynamic column widths */
 }
 
 table th, table td {
@@ -104,6 +106,27 @@ table tbody tr:nth-child(even) {
 
 table tbody tr:hover {
     background-color: #ddd;
+}
+
+/* Specific column widths */
+table th[data-column="hz"],
+table td:nth-child(3) {
+    width: 80px; /* Adjust as needed */
+}
+
+table th[data-column="dpi"],
+table td:nth-child(4) {
+    width: 80px; /* Adjust as needed */
+}
+
+table th[data-column="sens"],
+table td:nth-child(5) {
+    width: 80px; /* Adjust as needed */
+}
+
+table th[data-column="edpi"],
+table td:nth-child(6) {
+    width: 80px; /* Adjust as needed */
 }
 
 footer {
