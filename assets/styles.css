@@ -52,7 +52,7 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
     padding: 0; /* Remove padding */
-    margin: 0 1rem; /* Adjust margins to bring content in */
+    margin: 0 0.5rem; /* Adjust margins to bring content in */
     display: flex; /* Flex container for centering */
     justify-content: center; /* Center content */
 }
@@ -89,6 +89,7 @@ table th {
     font-weight: normal;
     cursor: pointer;
     position: relative; /* Position relative to place sort icon */
+    padding-right: 25px; /* Space for sort icon */
 }
 
 table th:hover .sort-icon {
@@ -109,24 +110,54 @@ table tbody tr:hover {
 }
 
 /* Specific column widths */
+table th[data-column="player"],
+table td:nth-child(1) {
+    width: 150px; /* Adjust as needed */
+}
+
+table th[data-column="mouse"],
+table td:nth-child(2) {
+    width: 150px; /* Adjust as needed */
+}
+
 table th[data-column="hz"],
 table td:nth-child(3) {
-    width: 80px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
 }
 
 table th[data-column="dpi"],
 table td:nth-child(4) {
-    width: 80px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
 }
 
 table th[data-column="sens"],
 table td:nth-child(5) {
-    width: 80px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
 }
 
 table th[data-column="edpi"],
 table td:nth-child(6) {
-    width: 80px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+}
+
+table th[data-column="resolution"],
+table td:nth-child(7) {
+    width: 150px; /* Adjust as needed */
+}
+
+table th[data-column="aspectRatio"],
+table td:nth-child(8) {
+    width: 100px; /* Adjust as needed */
+}
+
+table th[data-column="mousepad"],
+table td:nth-child(9) {
+    width: 150px; /* Adjust as needed */
+}
+
+table th[data-column="keyboard"],
+table td:nth-child(10) {
+    width: 150px; /* Adjust as needed */
 }
 
 footer {
