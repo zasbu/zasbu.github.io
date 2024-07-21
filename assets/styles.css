@@ -62,12 +62,24 @@ table th, table td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
 }
 
 table th {
     background-color: #333;
     color: #fff;
     font-weight: normal;
+    position: relative; /* Needed for arrows positioning */
+}
+
+.sort-arrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-left: 5px;
+    color: #fff;
+    cursor: pointer;
 }
 
 table tbody tr:nth-child(even) {
@@ -98,33 +110,3 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
-th {
-    position: relative;
-    cursor: pointer;
-}
-
-.sort-arrow {
-    display: none;
-    position: absolute;
-    right: 10px;
-    font-size: 0.8rem;
-    color: #333;
-}
-
-.sort-arrow:first-of-type {
-    top: 0;
-}
-
-.sort-arrow:last-of-type {
-    top: 1.5rem;
-}
-
-th.sorted-asc .sort-arrow:first-of-type {
-    display: inline;
-}
-
-th.sorted-desc .sort-arrow:last-of-type {
-    display: inline;
-}
-
