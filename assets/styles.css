@@ -51,12 +51,15 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
+    padding: 0 1rem; /* Add some padding to reduce space */
+    margin: 0 auto; /* Center the container horizontally */
+    width: 90%; /* Adjust width to make better use of available space */
 }
 
 table {
     width: 100%;
     border-collapse: collapse; /* Collapse borders for a more compact layout */
-    table-layout: fixed; /* Fixed layout to ensure columns stay proportional */
+    table-layout: auto; /* Auto layout for responsive behavior */
 }
 
 table th, table td {
