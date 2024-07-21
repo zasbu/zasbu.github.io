@@ -52,14 +52,13 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
     padding: 0; /* Remove extra padding */
-    margin: 0 auto; /* Center the table container */
-    width: 90%; /* Adjust width to control white space */
 }
 
+/* Table style adjustments */
 table {
     width: 100%;
     border-collapse: collapse; /* Collapse borders for a more compact layout */
-    table-layout: auto; /* Auto layout to adjust column width */
+    table-layout: auto; /* Allow columns to adjust based on content */
 }
 
 table th, table td {
@@ -69,8 +68,37 @@ table th, table td {
     white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide overflowed text */
     text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    vertical-align: middle;
 }
 
+/* Adjust column widths */
+table th[data-column="mouse"], table td:nth-child(2) {
+    width: 10%; /* Adjust width for mouse column */
+}
+
+table th[data-column="hz"], table th[data-column="dpi"], table th[data-column="sens"], table th[data-column="edpi"] {
+    width: 8%; /* Adjust width to bring columns closer */
+}
+
+/* Specific adjustments for flag images and player name alignment */
+table td.flag-column {
+    text-align: center; /* Center align flags */
+    padding-left: 0; /* Remove left padding */
+}
+
+table td.flag-column img {
+    width: 24px; /* Adjust width as needed */
+    height: auto; /* Adjust height proportionally */
+    border-radius: 4px; /* Rounded corners for flag */
+}
+
+table td.player-name {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem; /* Space for flag */
+}
+
+/* Sorting icons */
 table th .sort-icon {
     width: 12px;
     height: 12px;
@@ -87,7 +115,7 @@ table th {
     color: #fff;
     font-weight: normal;
     cursor: pointer;
-    position: relative; /* Ensure sorting icon is correctly positioned */
+    position: relative; /* Ensure the icon is positioned relative to the header */
 }
 
 table th:hover .sort-icon {
@@ -141,18 +169,5 @@ footer p {
     font-weight: bold;
 }
 
-.sort-icon {
-    width: 12px; /* Adjust size */
-    height: 12px; /* Adjust size */
-    margin-left: 5px; /* Space between text and icon */
-    vertical-align: middle;
-    opacity: 0.6;
-}
-
-/* Flag image styling */
-.flag {
-    width: 24px; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    object-fit: contain; /* Ensure image fits without cropping */
-}
+/* Google Fonts integration */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
