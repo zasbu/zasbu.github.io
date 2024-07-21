@@ -1,5 +1,5 @@
 body {
-    font-family: 'Inter', sans-serif; /* Updated font */
+    font-family: 'Inter', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -51,16 +51,14 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
-    padding: 0; /* Remove padding */
-    margin: 0 0.5rem; /* Adjust margins to bring content in */
-    display: flex; /* Flex container for centering */
-    justify-content: center; /* Center content */
+    width: calc(100% - 2rem); /* Adjust width to reduce extra space */
+    margin: 0 auto; /* Center the table container */
 }
 
 table {
-    width: auto; /* Adjust width to fit content */
+    width: 100%;
     border-collapse: collapse; /* Collapse borders for a more compact layout */
-    table-layout: auto; /* Auto layout for dynamic column widths */
+    table-layout: fixed; /* Fixed layout to ensure columns stay proportional */
 }
 
 table th, table td {
@@ -88,8 +86,7 @@ table th {
     color: #fff;
     font-weight: normal;
     cursor: pointer;
-    position: relative; /* Position relative to place sort icon */
-    padding-right: 25px; /* Space for sort icon */
+    position: relative; /* Ensure sort icon is positioned relative to header */
 }
 
 table th:hover .sort-icon {
@@ -107,66 +104,6 @@ table tbody tr:nth-child(even) {
 
 table tbody tr:hover {
     background-color: #ddd;
-}
-
-/* Specific column widths */
-table th[data-column="player"],
-table td:nth-child(1) {
-    width: 150px; /* Adjust as needed */
-}
-
-table th[data-column="mouse"],
-table td:nth-child(2) {
-    width: 150px; /* Adjust as needed */
-}
-
-table th[data-column="hz"],
-table td:nth-child(3) {
-    width: 100px; /* Adjust as needed */
-}
-
-table th[data-column="dpi"],
-table td:nth-child(4) {
-    width: 100px; /* Adjust as needed */
-}
-
-table th[data-column="sens"],
-table td:nth-child(5) {
-    width: 100px; /* Adjust as needed */
-}
-
-table th[data-column="edpi"],
-table td:nth-child(6) {
-    width: 100px; /* Adjust as needed */
-}
-
-table th[data-column="resolution"],
-table td:nth-child(7) {
-    width: 150px; /* Adjust as needed */
-}
-
-table th[data-column="aspectRatio"],
-table td:nth-child(8) {
-    width: 100px; /* Adjust as needed */
-}
-
-table th[data-column="mousepad"],
-table td:nth-child(9) {
-    width: 150px; /* Adjust as needed */
-}
-
-table th[data-column="keyboard"],
-table td:nth-child(10) {
-    width: 150px; /* Adjust as needed */
-}
-
-.flag-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    border-radius: 50%; /* Make the image rounded */
-    margin-right: 8px; /* Space between flag and text */
-    vertical-align: middle; /* Align flag with text */
-    display: inline-block;
 }
 
 footer {
@@ -209,4 +146,13 @@ footer p {
     margin-left: 5px; /* Space between text and icon */
     vertical-align: middle;
     opacity: 0.6;
+}
+
+.flag-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the image rounded */
+    margin-right: 8px; /* Space between flag and text */
+    vertical-align: middle; /* Align flag with text */
+    display: inline-block;
 }
