@@ -1,18 +1,24 @@
 document.getElementById('search').addEventListener('keyup', function() {
-    var input = document.getElementById('search');
-    var filter = input.value.toLowerCase();
-    var table = document.querySelector('table tbody');
-    var tr = table.getElementsByTagName('tr');
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toLowerCase();
+    table = document.querySelector('#settingsTable tbody');
+    tr = table.getElementsByTagName('tr');
 
-    for (var i = 0; i < tr.length; i++) {
-        var td = tr[i].getElementsByTagName('td')[0];
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName('td')[0];
         if (td) {
-            var txtValue = td.textContent || td.innerText;
-            tr[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? "" : "none";
-        }
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }       
     }
 });
 
+// Function to calculate eDPI and update table
 function calculateEDPI() {
     const table = document.querySelector('#settingsTable tbody');
     const rows = table.getElementsByTagName('tr');
@@ -31,12 +37,13 @@ function calculateEDPI() {
     }
 }
 
+// Call the function to calculate eDPI when the page loads
 document.addEventListener('DOMContentLoaded', calculateEDPI);
 
-document.querySelectorAll('th').forEach(header => {
+// Add sorting functionality
+document.querySelectorAll('th').forEach((header, index) => {
     header.addEventListener('click', () => {
-        const table = header.parentElement.parentElement.parentElement;
-        const index = Array.from(header.parentElement.children).indexOf(header);
+        const table = header.closest('table');
         const isNumeric = !isNaN(parseFloat(table.querySelector(`tbody tr td:nth-child(${index + 1})`).textContent));
         sortTable(table, index, isNumeric);
     });
@@ -62,9 +69,5 @@ function sortTable(table, column, isNumeric) {
     
     const tbody = table.querySelector('tbody');
     tbody.append(...rows);
-    
-    table.querySelectorAll('th').forEach(th => th.classList.remove('sorted-asc', 'sorted-desc'));
-    table.querySelectorAll('th')[column].classList.add(ascending ? 'sorted-asc' : 'sorted-desc');
-    
     table.dataset.sort = ascending ? 'asc' : 'desc';
 }
