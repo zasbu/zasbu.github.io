@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surfer Settings</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="assets/cog-icon.png" type="image/png"> <!-- Favicon link -->
 </head>
 <body>
     <header>
@@ -18,19 +19,19 @@
     </header>
     <main>
         <div class="table-container">
-            <table>
+            <table id="settingsTable">
                 <thead>
                     <tr>
-                        <th>Player</th>
-                        <th>Mouse</th>
-                        <th>HZ</th>
-                        <th>DPI</th>
-                        <th>Sens</th>
-                        <th>eDPI</th>
-                        <th>Resolution</th>
-                        <th>Aspect Ratio</th>
-                        <th>Mousepad</th>
-                        <th>Keyboard</th>
+                        <th data-column="player">Player <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="mouse">Mouse <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="hz">HZ <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="dpi">DPI <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="sens">Sens <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="edpi">eDPI <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="resolution">Resolution <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="aspectRatio">Aspect Ratio <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="mousepad">Mousepad <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
+                        <th data-column="keyboard">Keyboard <span class="sort-arrow">&#9650;</span><span class="sort-arrow">&#9660;</span></th>
                     </tr>
                 </thead>
                 <tbody>
