@@ -160,6 +160,15 @@ table td:nth-child(10) {
     width: 150px; /* Adjust as needed */
 }
 
+.flag-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the image rounded */
+    margin-right: 8px; /* Space between flag and text */
+    vertical-align: middle; /* Align flag with text */
+    display: inline-block;
+}
+
 footer {
     position: fixed;
     bottom: 0;
