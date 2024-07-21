@@ -42,8 +42,8 @@ header .search-bar input {
 
 main {
     padding: 2rem;
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: 100%; /* Adjusted to ensure full width */
+    margin: 0 auto; /* Center content */
 }
 
 .table-container {
