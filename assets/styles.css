@@ -42,7 +42,7 @@ header .search-bar input {
 
 main {
     padding: 2rem;
-    max-width: 100%; /* Adjusted to ensure full width */
+    max-width: 100%; /* Ensure full width */
     margin: 0 auto;
 }
 
@@ -50,13 +50,13 @@ main {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Hide horizontal scroll bar */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed; /* Ensure table columns are distributed evenly */
+    table-layout: auto; /* Adjust to fit content */
 }
 
 table th, table td {
