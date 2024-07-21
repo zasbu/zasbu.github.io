@@ -51,7 +51,6 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
-    padding: 0; /* Remove extra padding */
 }
 
 /* Table style adjustments */
@@ -73,11 +72,11 @@ table th, table td {
 
 /* Adjust column widths */
 table th[data-column="mouse"], table td:nth-child(2) {
-    width: 10%; /* Adjust width for mouse column */
+    width: 16%; /* Adjust width for mouse column */
 }
 
 table th[data-column="hz"], table th[data-column="dpi"], table th[data-column="sens"], table th[data-column="edpi"] {
-    width: 8%; /* Adjust width to bring columns closer */
+    width: 10%; /* Adjust width to bring columns closer */
 }
 
 /* Specific adjustments for flag images and player name alignment */
