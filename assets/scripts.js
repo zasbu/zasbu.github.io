@@ -38,7 +38,12 @@ function calculateEDPI() {
 }
 
 // Call the function to calculate eDPI when the page loads
-document.addEventListener('DOMContentLoaded', calculateEDPI);
+document.addEventListener('DOMContentLoaded', () => {
+    calculateEDPI();
+    // Sort by Player name (column 0) by default when the page loads
+    const table = document.querySelector('#settingsTable');
+    sortTable(table, 0, false);
+});
 
 // Add sorting functionality
 document.querySelectorAll('th').forEach((header, index) => {
