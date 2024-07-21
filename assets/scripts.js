@@ -31,14 +31,14 @@ function calculateEDPI() {
             
             if (!isNaN(dpi) && !isNaN(sens)) {
                 const edpi = dpi * sens;
-                cells[5].textContent = edpi.toFixed(2); // Update eDPI in the 6th column
+                cells[5].textContent = Math.round(edpi); // Update eDPI in the 6th column without decimal places
             }
         }
     }
 }
 
 // Call the function to calculate eDPI when the page loads
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', calculateEDPI);
     calculateEDPI();
     // Sort by Player name (column 0) by default when the page loads
     const table = document.querySelector('#settingsTable');
