@@ -98,3 +98,33 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+th {
+    position: relative;
+    cursor: pointer;
+}
+
+.sort-arrow {
+    display: none;
+    position: absolute;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.sort-arrow:first-of-type {
+    top: 0;
+}
+
+.sort-arrow:last-of-type {
+    top: 1.5rem;
+}
+
+th.sorted-asc .sort-arrow:first-of-type {
+    display: inline;
+}
+
+th.sorted-desc .sort-arrow:last-of-type {
+    display: inline;
+}
+
