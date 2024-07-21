@@ -51,6 +51,8 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
+    margin: 0 auto; /* Center the container */
+    max-width: 90%; /* Restrict width to avoid excess space */
 }
 
 /* Table style adjustments */
