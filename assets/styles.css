@@ -47,24 +47,25 @@ main {
 }
 
 .table-container {
-    overflow-x: auto;
+    overflow-x: auto; /* Allow horizontal scroll if needed */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure the container takes the full width */
+    max-width: none; /* Remove any max-width constraints */
 }
 
 table {
-    width: 100%;
+    width: 100%; /* Ensure the table takes the full width of the container */
     border-collapse: collapse;
+    table-layout: auto; /* Allow table to expand based on content */
 }
 
 table th, table td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 table th {
