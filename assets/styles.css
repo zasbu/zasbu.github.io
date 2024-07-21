@@ -107,6 +107,16 @@ table tbody tr:hover {
     background-color: #ddd;
 }
 
+/* Align the player name cells */
+table td {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+table td img.flag {
+    margin-right: 8px; /* Space between flag and text */
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -153,6 +163,6 @@ footer p {
 .flag {
     width: 24px; /* Adjust size */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 0; /* No rounding of corners */
     object-fit: contain; /* Ensure image fits without cropping */
 }
