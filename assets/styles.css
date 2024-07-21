@@ -59,7 +59,7 @@ main {
 table {
     width: 100%;
     border-collapse: collapse; /* Collapse borders for a more compact layout */
-    table-layout: fixed; /* Fixed layout to ensure columns stay proportional */
+    table-layout: auto; /* Auto layout to adjust column width */
 }
 
 table th, table td {
@@ -152,7 +152,7 @@ footer p {
 /* Flag image styling */
 .flag {
     width: 24px; /* Adjust size */
-    height: 16px; /* Adjust size */
-    border-radius: 50%; /* Make the image rounded */
-    object-fit: cover; /* Ensure image covers the space */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    object-fit: contain; /* Ensure image fits without cropping */
 }
