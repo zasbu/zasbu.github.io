@@ -25,12 +25,12 @@ function calculateEDPI() {
     for (let i = 0; i < rows.length; i++) {
         const cells = rows[i].getElementsByTagName('td');
         if (cells.length) {
-            const dpi = parseFloat(cells[3].textContent); // DPI is in the 4th column
-            const sens = parseFloat(cells[4].textContent); // Sensitivity is in the 5th column
+            const dpi = parseFloat(cells[4].textContent); // DPI is in the 5th column
+            const sens = parseFloat(cells[5].textContent); // Sensitivity is in the 6th column
             
             if (!isNaN(dpi) && !isNaN(sens)) {
                 const edpi = dpi * sens;
-                cells[5].textContent = Math.round(edpi); // Update eDPI in the 6th column without decimal places
+                cells[6].textContent = Math.round(edpi); // Update eDPI in the 7th column without decimal places
             }
         }
     }
