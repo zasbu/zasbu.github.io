@@ -124,11 +124,6 @@ table td a {
     font-weight: bold; /* Make the link text bold */
 }
 
-table td a:hover {
-    text-decoration: underline; /* Add underline on hover */
-    color: #0056b3; /* Darker color on hover */
-}
-
 table td img.flag {
     margin-right: 8px; /* Space between flag and text */
     vertical-align: middle; /* Align flag vertically with text */
@@ -183,3 +178,5 @@ footer p {
     border-radius: 0; /* No rounding of corners */
     object-fit: contain; /* Ensure image fits without cropping */
 }
+
+
