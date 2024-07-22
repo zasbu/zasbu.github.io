@@ -52,8 +52,9 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Hide overflow */
     padding: 0; /* Remove extra padding */
-    margin: 0 auto; /* Center the table container */
-    width: 80%; /* Adjust width to control white space */
+    margin: auto; /* Center the table container */
+    width: 90%; /* Adjust width to control white space */
+    padding: 1rem; /* Add some padding to the container for spacing */
 }
 
 table {
@@ -63,7 +64,7 @@ table {
 }
 
 table th, table td {
-    padding: 0.3rem; /* Reduced padding for more compact rows */
+    padding: 0.3rem 0.5rem; /* Reduce padding for a more compact table */
     text-align: left;
     border-bottom: 1px solid #ddd;
     white-space: nowrap; /* Prevent text from wrapping */
@@ -71,15 +72,17 @@ table th, table td {
     text-overflow: ellipsis; /* Show ellipsis for overflowed text */
 }
 
-table th .sort-icon {
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    right: 10px; /* Position the icon on the right side of the header */
-    top: 50%;
-    transform: translateY(-50%); /* Center the icon vertically */
-    opacity: 0.6;
-    transition: opacity 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+/* Adjust column widths for HZ, DPI, Sens, and eDPI */
+table th:nth-child(3),
+table th:nth-child(4),
+table th:nth-child(5),
+table th:nth-child(6),
+table td:nth-child(3),
+table td:nth-child(4),
+table td:nth-child(5),
+table td:nth-child(6) {
+    width: 8%; /* Adjust width as needed */
+    text-align: center; /* Center text for better alignment */
 }
 
 table th {
@@ -90,7 +93,21 @@ table th {
     position: relative; /* Ensure sorting icon is correctly positioned */
 }
 
-table th:hover .sort-icon {
+table th::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust right margin to create space between text and icon */
+    transform: translateY(-50%);
+    width: 10px; /* Width of the sorting icon */
+    height: 10px; /* Height of the sorting icon */
+    background-image: url('path/to/sort-icon.png'); /* Replace with actual path to sort icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Make sure the icon does not interfere with clicking */
+}
+
+table th:hover::after {
     opacity: 1; /* Show icon more clearly on hover */
     transform: translateY(-50%) scale(1.1); /* Slightly enlarge the icon on hover */
 }
@@ -111,6 +128,7 @@ table tbody tr:hover {
 table td {
     vertical-align: middle; /* Center content vertically */
     padding-left: 0.5rem; /* Ensure consistent padding */
+    padding-right: 0.5rem;
 }
 
 table td img.flag {
@@ -166,16 +184,4 @@ footer p {
     height: auto; /* Maintain aspect ratio */
     border-radius: 0; /* No rounding of corners */
     object-fit: contain; /* Ensure image fits without cropping */
-}
-
-table th:nth-child(3),
-table th:nth-child(4),
-table th:nth-child(5),
-table th:nth-child(6),
-table td:nth-child(3),
-table td:nth-child(4),
-table td:nth-child(5),
-table td:nth-child(6) {
-    width: 3%; /* Adjust width as needed */
-    text-align: center; /* Center text for better alignment */
 }
