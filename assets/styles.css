@@ -6,13 +6,14 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff; /* Set background to white */
+    color: #333; /* Text color for better contrast */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    border-bottom: 2px solid #ddd; /* Add a separator below the header */
 }
 
 header .logo {
@@ -35,8 +36,9 @@ header .logo span {
 header .search-bar input {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    border: none;
+    border: 1px solid #ccc; /* Add a border to make the search bar more visible */
     border-radius: 4px;
+    background-color: #f9f9f9; /* Slightly grey background for the search bar */
     width: 250px; /* Adjust width for better fit */
 }
 
