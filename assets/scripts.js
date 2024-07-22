@@ -18,7 +18,6 @@ document.getElementById('search').addEventListener('keyup', function() {
     }
 });
 
-// Function to calculate eDPI and update table
 function calculateEDPI() {
     const table = document.querySelector('#settingsTable tbody');
     const rows = table.getElementsByTagName('tr');
@@ -37,20 +36,15 @@ function calculateEDPI() {
     }
 }
 
-// Call the function to calculate eDPI when the page loads
-document.addEventListener('DOMContentLoaded', calculateEDPI);
+document.addEventListener('DOMContentLoaded', function() {
     calculateEDPI();
-    // Sort by Player name (column 0) by default when the page loads
     const table = document.querySelector('#settingsTable');
     sortTable(table, 0, false);
-});
-
-// Add sorting functionality
-document.querySelectorAll('th').forEach((header, index) => {
-    header.addEventListener('click', () => {
-        const table = header.closest('table');
-        const isNumeric = !isNaN(parseFloat(table.querySelector(`tbody tr td:nth-child(${index + 1})`).textContent));
-        sortTable(table, index, isNumeric);
+    document.querySelectorAll('th').forEach((header, index) => {
+        header.addEventListener('click', () => {
+            const isNumeric = !isNaN(parseFloat(table.querySelector(`tbody tr td:nth-child(${index + 1})`).textContent));
+            sortTable(table, index, isNumeric);
+        });
     });
 });
 
