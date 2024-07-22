@@ -53,7 +53,7 @@ main {
     overflow: hidden; /* Hide overflow */
     padding: 0; /* Remove extra padding */
     margin: 0 auto; /* Center the table container */
-    width: 80%; /* Adjust width to control white space */
+    width: 60%; /* Adjust width to control white space */
 }
 
 table {
@@ -63,7 +63,7 @@ table {
 }
 
 table th, table td {
-    padding: 0.3rem; /* Reduced padding for more compact rows */
+    padding: 0.6rem; /* Reduced padding for more compact rows */
     text-align: left;
     border-bottom: 1px solid #ddd;
     white-space: nowrap; /* Prevent text from wrapping */
@@ -96,7 +96,7 @@ table th:hover .sort-icon {
 }
 
 table tbody tr {
-    line-height: 1.4; /* Adjust line height for better row compactness */
+    line-height: 1.5; /* Adjust line height for better row compactness */
 }
 
 table tbody tr:nth-child(even) {
