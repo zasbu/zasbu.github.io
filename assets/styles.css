@@ -118,6 +118,17 @@ table td {
     padding-left: 0.5rem; /* Ensure consistent padding */
 }
 
+table td a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the link text bold */
+}
+
+table td a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #0056b3; /* Darker color on hover */
+}
+
 table td img.flag {
     margin-right: 8px; /* Space between flag and text */
     vertical-align: middle; /* Align flag vertically with text */
