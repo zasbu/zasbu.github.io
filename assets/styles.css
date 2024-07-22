@@ -53,7 +53,7 @@ main {
     overflow: hidden; /* Hide overflow */
     padding: 0; /* Remove extra padding */
     margin: 0 auto; /* Center the table container */
-    width: 90%; /* Adjust width to control white space */
+    width: 80%; /* Adjust width to control white space */
 }
 
 table {
@@ -63,7 +63,7 @@ table {
 }
 
 table th, table td {
-    padding: 0.5rem; /* Reduced padding for more compact rows */
+    padding: 0.3rem; /* Reduced padding for more compact rows */
     text-align: left;
     border-bottom: 1px solid #ddd;
     white-space: nowrap; /* Prevent text from wrapping */
@@ -166,4 +166,16 @@ footer p {
     height: auto; /* Maintain aspect ratio */
     border-radius: 0; /* No rounding of corners */
     object-fit: contain; /* Ensure image fits without cropping */
+}
+
+table th:nth-child(3),
+table th:nth-child(4),
+table th:nth-child(5),
+table th:nth-child(6),
+table td:nth-child(3),
+table td:nth-child(4),
+table td:nth-child(5),
+table td:nth-child(6) {
+    width: 3%; /* Adjust width as needed */
+    text-align: center; /* Center text for better alignment */
 }
